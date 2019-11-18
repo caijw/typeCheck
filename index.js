@@ -1,9 +1,11 @@
 
-
+/**
+  check({a: 1}, {a: 0}, "root");
+ */
 exports.check = function(toCheck, expected, path = "parameter") {
   let result = ``;
-  const toCheckType = Object.prototype.toString.call(toCheck).slice(8, -1);;
-  const expectedType = Object.prototype.toString.call(expected).slice(8, -1);;
+  const toCheckType = Object.prototype.toString.call(toCheck).slice(8, -1);
+  const expectedType = Object.prototype.toString.call(expected).slice(8, -1);
   if (toCheckType !== expectedType) {
     result = `${path} should be ${expectedType}, not ${toCheckType};`;
     return result;
@@ -30,6 +32,7 @@ exports.check = function(toCheck, expected, path = "parameter") {
   }
   return result;
 };
+
 
 
 // let res = exports.check({
