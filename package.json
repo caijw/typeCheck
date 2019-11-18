@@ -1,6 +1,6 @@
 {
-  "name": "typecheck",
-  "version": "1.0.0",
+  "name": "types_checker_23",
+  "version": "1.0.1",
   "description": "check javascript type",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "javascript",
     "type"
   ],
-  "author": "kingweicai",
+  "author": "kingwei",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/caijw/typeCheck/issues"

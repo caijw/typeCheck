@@ -9,9 +9,6 @@ exports.check = function(toCheck, expected, path = "parameter") {
     return result;
   }
 
-  console.log(toCheck, expected, path);
-  console.log(toCheckType, expectedType);
-
   switch(expectedType) {
     case "Object":
       const keys = Object.keys(expected);
@@ -33,3 +30,30 @@ exports.check = function(toCheck, expected, path = "parameter") {
   }
   return result;
 };
+
+
+// let res = exports.check({
+//   a: 12,
+//   b: {
+//     d: "23fsfs",
+//     f: true
+//   },
+//   c: [1, {
+//     s: "sdfsfsdfsdfsdfsdfsd"
+//   }]
+// }, {
+//   a: 0,
+//   b: {
+//     d: "",
+//     f: true
+//   },
+//   c: [0, {
+//     s: ""
+//   }]
+// }, "root");
+
+// if (res) {
+//   throw res;
+// } else {
+//   console.log("check ok!");
+// }
