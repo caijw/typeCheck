@@ -25,7 +25,7 @@ const expect1 = {
 
 const root1 = "root";
 
-const res1 = typeCheck.check(check1, expect1, root1);
+const res1 = typeCheck.check_v1(check1, expect1, root1);
 
 assert.strictEqual(res1, "");
 
@@ -53,6 +53,8 @@ const expect2 = {
 
 const root2 = "root";
 
-const res2 = typeCheck.check(check2, expect2, root1);
+const res2 = typeCheck.check_v1(check2, expect2, root1);
 
 assert.strictEqual(res2, `${root2}.c[1].s should be Number, not String;`);
+
+console.log("test ok!");
